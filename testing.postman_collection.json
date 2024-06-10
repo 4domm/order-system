@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "67a6defc-5297-4958-abee-c087b2690c61",
+		"name": "testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36220521"
+	},
+	"item": [
+		{
+			"name": "AuthService",
+			"item": [
+				{
+					"name": "get-information",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJpZCI6ImE5ZjI1NDljLWQ0NzItNDU4NS04ZGNmLWRjNDgxZDg0MjRiZCIsInVzZXJuYW1lIjoiMzMzIiwic3ViIjoiMzMzQG1haWwuY29tIiwiaWF0IjoxNzE4MTU0NTgyLCJleHAiOjE3MTgxNTgxODJ9.Nr5hHQvwcXXAtQG2pVoUXlI0oJ0bDy-hhPw4m4EfwW--prp3VD5fJ_xP_CgMSVRm",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/information",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"information"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"333\",\r\n  \"email\": \"333@mail.com\",\r\n  \"password\": \"333\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"333\",\r\n  \"email\": \"333@mail.com\",\r\n  \"password\": \"333\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"registration"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TicketService",
+			"item": [
+				{
+					"name": "get-order-by-id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJpZCI6ImI3ZmZiZTgyLTY0MzYtNGVlOS04NzdlLWI2YTE5YzMwZDVjMSIsInVzZXJuYW1lIjoiMzMzIiwic3ViIjoiMzMzQG1haWwuY29tIiwiaWF0IjoxNzE4MTQ5NzcwLCJleHAiOjE3MTgxNTMzNzB9.W5tiGXsPLPojSBamhN53EDg2pKCEQ2_Q8Uoo6_OSCaMX1AdGqGM482HZv8vwWDZK",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/9f825e80-214a-419e-90b8-b2061716236a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"9f825e80-214a-419e-90b8-b2061716236a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJpZCI6ImI3ZmZiZTgyLTY0MzYtNGVlOS04NzdlLWI2YTE5YzMwZDVjMSIsInVzZXJuYW1lIjoiMzMzIiwic3ViIjoiMzMzQG1haWwuY29tIiwiaWF0IjoxNzE4MTQ5NzcwLCJleHAiOjE3MTgxNTMzNzB9.W5tiGXsPLPojSBamhN53EDg2pKCEQ2_Q8Uoo6_OSCaMX1AdGqGM482HZv8vwWDZK",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"b7ffbe82-6436-4ee9-877e-b6a19c30d5c1\",\r\n  \"fromStationId\": \"80479477-193c-4d01-9335-d7abeb724f79\",\r\n  \"toStationId\": \"cb272ed5-21d0-4845-88a0-8eaca46e426b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/create-order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"create-order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-station",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJpZCI6ImE5ZjI1NDljLWQ0NzItNDU4NS04ZGNmLWRjNDgxZDg0MjRiZCIsInVzZXJuYW1lIjoiMzMzIiwic3ViIjoiMzMzQG1haWwuY29tIiwiaWF0IjoxNzE4MTU0NTgyLCJleHAiOjE3MTgxNTgxODJ9.Nr5hHQvwcXXAtQG2pVoUXlI0oJ0bDy-hhPw4m4EfwW--prp3VD5fJ_xP_CgMSVRm",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"gggggggggggggggggggg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/add-station",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"add-station"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-stations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJpZCI6ImNlNzVlNjEzLThkYmItNDI3ZS05MWE0LWE1YTMzN2Y0MWFiZCIsInVzZXJuYW1lIjoiMTExIiwic3ViIjoic3NzMkBzYS5jb20iLCJpYXQiOjE3MTgyMDAzODUsImV4cCI6MTcxODIwMzk4NX0.ZFUrZIYiE_Wdo1YTP7RL9F0gci8nZS47mI64cwzdwSW1XkMcU0qv4Kdh_8PubPrz",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9090/get-stations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"get-stations"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
